@@ -33,33 +33,33 @@ URL: http://gettemplates.co
 
 	<!-- Animate.css -->
 
-	<link rel="stylesheet" href="{{ asset('css/animate.css')}}">
+	<link rel="stylesheet" href="{{ url('css/animate.css')}}">
 	<!-- Icomoon Icon Fonts-->
 
-	<link rel="stylesheet" href="{{ asset('css/icomoon.css')}}">
+	<link rel="stylesheet" href="{{ url('css/icomoon.css')}}">
 	<!-- Themify Icons-->
-	<link rel="stylesheet" href="{{ asset('css/themify-icons.css')}}">
+	<link rel="stylesheet" href="{{ url('css/themify-icons.css')}}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
-	<link rel="stylesheet" href="{{ asset('css/icontennis.css')}}">
+	<link rel="stylesheet" href="{{ url('css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{ url('css/icontennis.css')}}">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
+	<link rel="stylesheet" href="{{ url('css/magnific-popup.css')}}">
 
 	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('css/MyStyle.css')}}">
+	<link rel="stylesheet" href="{{ url('css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css')}}">
+	<link rel="stylesheet" href="{{ url('css/MyStyle.css')}}">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="{{ asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{ url('css/style.css')}}">
 
 	<!-- Gallery  -->
-	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">                                      <!-- Bootstrap style -->
-	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">                                     <!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{ asset('css/templatemo-style.css')}}">                                   <!-- Templatemo style -->
+	<link rel="stylesheet" href="{{ url('css/bootstrap.min.css')}}">                                      <!-- Bootstrap style -->
+	<link rel="stylesheet" href="{{ url('css/magnific-popup.css')}}">                                     <!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ url('css/templatemo-style.css')}}">                                   <!-- Templatemo style -->
 
 	<!-- Modernizr JS -->
-	<script src="{{ asset('js/modernizr-2.6.2.min.js')}}"></script>
+	<script src="{{ url('js/modernizr-2.6.2.min.js')}}"></script>
 
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -106,60 +106,52 @@ URL: http://gettemplates.co
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2 col-xs-12">
+					<div class="col-sm-4 col-xs-12">
 						<img id="logo" src="{{ url('images/logo_png.png')}}" alt="logo transparent" height="300" width="300"  >
 					</div>
-					<div class="col-sm-10  col-xs-10 text-right menu-1">
+					<div class="col-xs-8 text-right menu-1">
 						<ul>
-							<li class="active"><a id="li_menu0" href="{{route('accueil')}}">Accueil</a></li>
+							<li class="active"><a id="li_menu" href="{{route('accueil')}}">Accueil</a></li>
 							<li class="has-dropdown">
-								<a  id="li_menu1" href="{{route('club')}}">Club</a>
+								<a  id="li_menu" href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
-									<li><a href="#historique">Historique</a></li>
-									<li><a href="#comite">Comité</a></li>
-									<li><a href="#installations">Installations</a></li>
-									<li><a href="#partenaires">Partenaires</a></li>
+									<li><a href="#">Horaires</a></li>
+									<li><a href="#">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a id="li_menu2" href="{{route('competition')}}">Compétitions</a>
+								<a id="li_menu" href="{{route('competition')}}">Compétitions</a>
 								<ul class="dropdown">
-									<li><a href="#tournoi">Tournois</a></li>
-									<li><a href="#equipe">Equipes</a></li>
-									<li><a href="#arbitres">Arbitres</a></li>
-									<li><a href="#resultats">Résultats</a></li>
+									<li><a href="#">Tournois</a></li>
+									<li><a href="#">Les équipes</a></li>
+									<li><a href="#">Les arbitres</a></li>
+									<li><a href="#">Résultats</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a id="li_menu3"  href="{{route('info-pratique')}}">Infos Pratiques</a>
+								<a id="li_menu"  href="{{route('info-pratique')}}">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#horaires">Horaires</a></li>
-									<li><a href="#devenir-membre">Devenir Membre</a></li>
-									<li><a href="#reservations">Réservation</a></li>
-									<li><a href="#tarifs">Tarifs</a></li>
+									<li><a href="#">Horaires</a></li>
+									<li><a href="#">Devenir Membre</a></li>
+									<li><a href="#">Réservation</a></li>
+									<li><a href="#">Tarifs</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
-								<a id="li_menu4" href="{{route('enseignement')}}">L'enseignement</a>
+								<a id="li_menu" href="{{route('enseignement')}}">L'enseignement</a>
 								<ul class="dropdown">
-									<li><a href="#l-equipe-pedagogique">Equipe pédagogique</a></li>
-									<li><a href="#l-ecole-de-tennis">Ecole de tennis</a></li>
-									<li><a href="#cours-colectifs">Cours collectifs</a></li>
-									<li><a href="#les-stages">Stages</a></li>
+									<li><a href="#">L'équipe pédagogique</a></li>
+									<li><a href="#">L'école de tennis</a></li>
+									<li><a href="#">Les cours collectifs adultes</a></li>
+									<li><a href="#">Les stages</a></li>
 								</ul>
 							</li>
-                                                        <li ><a id="li_menu5" href="#">Galerie</a></li>
-							<li><a id="li_menu6" href="{{route('accueil')}}">Liens utiles</a></li>
-							<li class="has-dropdown">
-								<a id="li_menu7" href="{{route('enseignement')}}">Contact</a>
-								<ul class="dropdown">
-									<li><a  href="#coordonnees">Coordonnées</a></li>
-                                                                        <li><a  href="#contacter">Nous contacter</a></li>
-                                                                        <li><a  href="#plan">Plan d'accès</a></li> 
-								</ul>
-							</li>
-							
-						</ul>    
+							<li><a id="li_menu" href="{{route('galerie')}}">Galerie</a></li>
+							<li><a id="li_menu" href="{{route('liens_utiles')}}">Liens utiles</a></li>
+							{{-- <li><a id="li_menu" href="{{route('contact')}}">Contact</a></li> --}}
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -426,31 +418,31 @@ URL: http://gettemplates.co
 <!-- FIN Modal de Reset Password -->
 
 <!-- jQuery -->
-<script src="{{ asset('js/jquery.min.js')}}"></script>
+<script src="{{ url('js/jquery.min.js')}}"></script>
 <!-- jQuery Easing -->
-<script src="{{ asset('js/jquery.easing.1.3.js')}}"></script>
+<script src="{{ url('js/jquery.easing.1.3.js')}}"></script>
 <!-- Bootstrap -->
-<script src="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="{{ url('js/bootstrap.min.js')}}"></script>
 <!-- Waypoints -->
-<script src="{{ asset('js/jquery.waypoints.min.js')}}"></script>
+<script src="{{ url('js/jquery.waypoints.min.js')}}"></script>
 <!-- Carousel -->
-<script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{ url('js/owl.carousel.min.js')}}"></script>
 <!-- countTo -->
-<script src="{{ asset('js/jquery.countTo.js')}}"></script>
+<script src="{{ url('js/jquery.countTo.js')}}"></script>
 <!-- Magnific Popup -->
-<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{ asset('js/magnific-popup-options.js')}}"></script>
+<script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{ url('js/magnific-popup-options.js')}}"></script>
 
 <!-- Gallery -->
-<script src="{{ asset('js/isotope.pkgd.min.js')}}"></script>          <!-- https://isotope.metafizzy.co/ -->
-<script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     <!-- https://imagesloaded.desandro.com/ -->
-<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
-<script src="{{ asset('js/parallax.min.js')}}"></script>
+<script src="{{ url('js/isotope.pkgd.min.js')}}"></script>          <!-- https://isotope.metafizzy.co/ -->
+<script src="{{ url('js/imagesloaded.pkgd.min.js')}}"></script>     <!-- https://imagesloaded.desandro.com/ -->
+<script src="{{ url('js/jquery.magnific-popup.min.js')}}"></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
+<script src="{{ url('js/parallax.min.js')}}"></script>
 
 
-<script src="{{ asset('js/main.js')}}"></script>
+<script src="{{ url('js/main.js')}}"></script>
 
-<script src="{{asset('js/lightbox.min.js')}}"></script>
+<script src="{{url('js/lightbox.min.js')}}"></script>
 <script>
 $(document).ready(function() {
 	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -489,10 +481,6 @@ $(document).ready(function(){
         $('#oubliMdp').click(function(){
 		$('{{$nom_modal}}').modal('toggle');
 		$('#modalPassword').modal('toggle');
-	});
-        
-        $('.li_').click(function(){
-		$('{{$nom_modal}}').modal('toggle');
 	});
 });
 </script>

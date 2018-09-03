@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     <label>Url de l'image :  </label>
-                    <input class="form-control" placeholder="Une URL" name="url ">
+                    <input class="form-control" placeholder="Une URL" name="url">
                 </div>
 
             </div>
