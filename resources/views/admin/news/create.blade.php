@@ -23,8 +23,8 @@
                     <input class="form-control" placeholder="Un titre" name="titre">
                 </div>
                 <div class="form-group">
-                    <label>Url de l'image :  </label>
-                    <input class="form-control" placeholder="Une URL" name="url">
+                    <a href="" class="popup_selector" data-inputid="feature_image"><label for="feature_image">Choisir une image</label></a>
+                    <input type="text" id="feature_image" name="feature_image" value="">
                 </div>
 
             </div>

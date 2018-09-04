@@ -42,7 +42,7 @@ class NewsController extends Controller {
 
         $laNews->titre = $request->get('titre');
         $laNews->contenu = $request->get('editor');
-        $laNews->url = $request->get('url');
+        $laNews->url = $request->get('feature_image');
 
 
         $laNews->save();

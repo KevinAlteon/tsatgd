@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Partenaire;
+Use File;
 
 
 class PartenaireController extends Controller
@@ -48,7 +49,7 @@ class PartenaireController extends Controller
         $partenaire->cp = $request->get('cp');
         $partenaire->tel = $request->get('tel');
         $partenaire->site = $request->get('site');
-        $partenaire->facebook = $request->get('fb');
+        $partenaire->facebook = $request->get('facebook');
         $partenaire->twitter = $request->get('twitter');
 
 

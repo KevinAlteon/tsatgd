@@ -396,7 +396,7 @@ immediately after the control sidebar -->
 $(function () {
   // Replace the <textarea id="editor"> with a CKEditor
   // instance, using default configuration.
-  CKEDITOR.replace('editor',{filebrowserBrowseUrl : '/elfinder/ckeditor'});
+  CKEDITOR.replace('editor',{fileBrowserBrowseUrl : '/elfdsinder/ckeditor'});
   //bootstrap WYSIHTML5 - text editor
   $(".textarea").wysihtml5();
 
