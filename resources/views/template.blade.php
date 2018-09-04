@@ -260,7 +260,7 @@ URL: http://gettemplates.co
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" id="loginClose">&times;</button>
-				<h4><span class="glyphicon glyphicon-lock"></span>Se connecter</h4>
+				<h4><span class="ti-unlock">&nbsp;</span>Se connecter</h4>
 			</div>
 			<div class="modal-body">
 				@if (Session::has('error'))
@@ -301,12 +301,12 @@ URL: http://gettemplates.co
 					</div>
 					<div class="form-group">
 						<div class="col-md-6">
-							<a class="btn btn-link" id="oubliMdp" href="javascript:void(0)">
+							<a class="btn btn_modal" id="oubliMdp" href="javascript:void(0)">
 								Mot de passe oublié?
 							</a>
 						</div>
 						<div class="col-md-6">
-							<button type="submit" class="btn btn-primary">
+							<button type="submit" class="btn btn_modal">
 								Connexion
 							</button>
 						</div>
@@ -329,7 +329,7 @@ URL: http://gettemplates.co
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" id="profilClose" class="close">&times;</button>
-					<h4>Mon profil</h4>
+					<h4><span class="ti-user">&nbsp;</span>Mon profil</h4>
 				</div>
 				<div class="row">
 					<div class="modal-body">
@@ -361,13 +361,13 @@ URL: http://gettemplates.co
 					<div class="modal-body">
 						<div class="form-row">
 							<div class="col-md-6">
-								<a class="btn btn-primary" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
+								<a class="btn btn_modal" href="{{route('admin.dashboard')}}" style="visibility: {{$statutAfficher}}">Vers le mode administrateur</a>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="col-md-6">
 								{!! Form::open(['route' => ['logout'], 'method' => 'post']) !!}
-								<button type="submit" class="btn btn-primary">Déconnexion</button>
+								<button type="submit" class="btn btn_modal">Déconnexion</button>
 								{!! Form::close() !!}
 							</div>
 						</div>

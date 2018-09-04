@@ -1899,4 +1899,19 @@ form label {
   border: 2px solid #17B794;
 }
 
+.btn_modal {
+background-color: #D2007B;
+border: none;
+color: white;
+padding: 16px 10px;
+text-align: center;
+font-size: 16px;
+margin: 4px 2px;
+opacity: 0.6;
+transition: 0.3s;
+}
+
+.btn_modal:hover {
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */
