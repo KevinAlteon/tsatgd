@@ -234,6 +234,9 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li.active > a {
   color: #fff !important;
 }
+ul {
+  margin-right: 2% !important;
+}
 
 @media screen and (max-width: 480px) {
   #gtco-header .text-left {
