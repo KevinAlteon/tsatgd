@@ -244,7 +244,7 @@ end task item
         <a href="{{ route("document.index") }}"><i class="fa fa-file-o"></i> <span>Documents</span>  </a>
       </li>
       <li class="treeview">
-        <a href="{{ route("partenaire.index") }}"><i class="fa fa-thumbs-up"></i> <span>Partenaire</span>  </a>
+        <a href="{{ route("partenaire.index") }}"><i class="fa fa-thumbs-up"></i> <span>Partenaires</span>  </a>
       </li>
 
 

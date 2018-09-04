@@ -2,7 +2,7 @@
 
 @section('title')
 <h1>
-    Administration des partenaire
+    Administration des partenaires
     <small>Gestion</small>
 </h1>
 @stop

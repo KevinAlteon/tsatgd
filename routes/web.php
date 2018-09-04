@@ -59,7 +59,7 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     });
 
     //FileManager El-finder
-    Route::get('el-finder' , '\Barryvdh\Elfinder\ElfinderController@showPopup')->name('el-finder');
+    Route::get('el-finder' , '\Barryvdh\Elfinder\ElfinderController@showConnector')->name('el-finder');
 
     // Galerie
     Route::get('photo/create/{album_id}', 'PhotoController@create')->name('photo.create')->where('album_id', '[0-9]+');
