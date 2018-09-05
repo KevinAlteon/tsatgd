@@ -54,8 +54,8 @@
     </div>
   </div>
 
-  <!-- EL FINDER : file manager -->
-  <div class="row">
+<!-- EL FINDER : file manager -->
+<div class="row">
     <div class='form-group col-md-12'>
       <label for="input_id">Image</label>
       <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
