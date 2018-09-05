@@ -17,7 +17,7 @@
               <a id="{{ $laNews->id }}" class="color-1"  data-toggle="modal" data-target="#modalNews{{$laNews->id}}">
                 <div class="text-center mybox col-md-3 {{$esp}} animate-box">
                   <h2 style="font-size: 17px;">{{ $laNews->titre }}</h2> <br />
-                  <span>{!! str_limit($laNews->contenu , 25 , '... Voir plus.') !!}</span> <br /><br />
+                  <span>  {!!  str_limit(strip_tags($laNews->contenu) , 25 , '... Voir plus.') !!} </span> <br /><br />
                   @if($laNews->url != "")
                     <img src="{{$laNews->url}}" height="150" width="125"> 
                   @else
