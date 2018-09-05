@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff !important;
 }
 ul {
-  margin-right: 2% !important;
+  margin-right: 5% !important;
 }
 
 @media screen and (max-width: 480px) {

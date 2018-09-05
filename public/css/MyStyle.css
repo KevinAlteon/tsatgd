@@ -48,8 +48,17 @@ padding-top: 0px;
         margin-top: -50px;}
 
 .mybox {
+    position: relative;
     height: 500px;
     background-color: #35464E;
+}
+
+.mybox .resteBas {
+    position: absolute;
+    text-align: center;
+    bottom: 2px;
+    left: 5px;
+    font-size: 14px;
 }
 
 .mybox:hover {
@@ -59,7 +68,7 @@ padding-top: 0px;
 }
 
 .news { 
-    margin-left: 6% !important;
+    margin-left: 16% !important;
 }
 
 .containColor {
@@ -69,6 +78,7 @@ padding-top: 0px;
 .newsTitre{
     font-size: 36px;
     margin-bottom: 20px;
+    margin-left: 9%;
     line-height: 1.5;
     font-weight: bold;
     color: #fff;
