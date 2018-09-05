@@ -47,6 +47,36 @@ padding-top: 0px;
 #logo{
         margin-top: -50px;}
 
+.mybox {
+    height: 500px;
+    background-color: #35464E;
+}
+
+.mybox:hover {
+    transition: 0.5;
+    background-color: #455963;
+    cursor: pointer;
+}
+
+.news { 
+    margin-left: 6% !important;
+}
+
+.containColor {
+    background-color: #303841;
+}
+
+.newsTitre{
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
 @media screen and (max-width: 1050px){
 
 .menu-hidden{
@@ -70,5 +100,5 @@ display: none;
 }
 @media screen and (max-width : 768px){
 #logo{
-
       margin-top: 0px;}
+}
