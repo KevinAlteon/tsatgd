@@ -42,7 +42,7 @@ class PagesController extends Controller {
     }
     public function enseignement() {
 
-        $contenu=Menu::where("slug","l-enseignement")->first();
+        $contenu=Menu::where("slug","enseignement")->first();
         return view('front.enseignement')->with("contenu",$contenu);
     }
     public function contact() {
