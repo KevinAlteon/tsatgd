@@ -47,10 +47,8 @@
                                     {{ $uneNews["id"] }}
                                 </td>
                                 <td class="col-md-10" id="td{{ $uneNews["id"] }}">
-                                    <a href="..." style="display:block;width:100%;height:100%;">
                                     {{ $uneNews["titre"] }}
-                                    </a>
-                                </td>
+                                 </td>
                                 <td class="col-md-1">
                                     <div class="row">
                                         <div class="col-md-6">

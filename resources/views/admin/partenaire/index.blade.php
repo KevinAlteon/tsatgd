@@ -76,7 +76,7 @@
                                     {{ $unPartenaire["site"] }}
                                 </td>
                                 <td class="col-md-2" id="td{{ $unPartenaire["id"] }}">
-                                    {{ $unPartenaire["fb"] }}
+                                    {{ $unPartenaire["facebook"] }}
                                 </td>
                                 <td class="col-md-2" id="td{{ $unPartenaire["id"] }}">
                                     {{ $unPartenaire["twitter"] }}

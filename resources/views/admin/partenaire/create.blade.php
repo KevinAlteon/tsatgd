@@ -46,7 +46,7 @@
     </div>
     <div class='form-group col-md-4'>
       <label>Lien page Facebook : </label>
-      <input class="form-control" placeholder="Facebook partenaire" name="fb">
+      <input class="form-control" placeholder="Facebook partenaire" name="facebook">
     </div>
     <div class='form-group col-md-4'>
       <label>Lien Twitter : </label>
@@ -57,10 +57,8 @@
 <!-- EL FINDER : file manager -->
 <div class="row">
     <div class='form-group col-md-12'>
-      <label for="input_id">Image</label>
-      <a href="" class="popup_selector" data-inputid="feature_image">Select Image</a>
-      <label for="feature_image">Feature Image</label>
-<input type="text" id="feature_image" name="feature_image" value="">
+      <a href="" class="popup_selector" data-inputid="feature_image"><label for="feature_image">Choisir une image</label></a>
+      <input type="text" id="feature_image" name="feature_image" value="">
     </div>
   </div>
 
