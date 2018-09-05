@@ -115,47 +115,47 @@ URL: http://gettemplates.co
 							<li class="has-dropdown">
 								<a  id="li_menu1" href="{{route('club')}}">Club</a>
 								<ul class="dropdown">
-									<li><a href="#historique">Historique</a></li>
-									<li><a href="#comite">Comité</a></li>
-									<li><a href="#installations">Installations</a></li>
-									<li><a href="#partenaires">Partenaires</a></li>
+									<li><a href="{{route('club')}}">Historique</a></li>
+									<li><a href="{{route('club')}}">Comité</a></li>
+									<li><a href="{{route('club')}}">Installations</a></li>
+									<li><a href="{{route('club')}}">Partenaires</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
 								<a id="li_menu2" href="{{route('competition')}}">Compétitions</a>
 								<ul class="dropdown">
-									<li><a href="#tournoi">Tournois</a></li>
-									<li><a href="#equipe">Equipes</a></li>
-									<li><a href="#arbitres">Arbitres</a></li>
-									<li><a href="#resultats">Résultats</a></li>
+									<li><a href="{{route('competition')}}">Tournois</a></li>
+									<li><a href="{{route('competition')}}">Equipes</a></li>
+									<li><a href="{{route('competition')}}">Arbitres</a></li>
+									<li><a href="{{route('competition')}}">Résultats</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
 								<a id="li_menu3"  href="{{route('info-pratique')}}">Infos Pratiques</a>
 								<ul class="dropdown">
-									<li><a href="#horaires">Horaires</a></li>
-									<li><a href="#devenir-membre">Devenir Membre</a></li>
-									<li><a href="#reservations">Réservation</a></li>
-									<li><a href="#tarifs">Tarifs</a></li>
+									<li><a href="{{route('info-pratique')}}">Horaires</a></li>
+									<li><a href="{{route('info-pratique')}}">Devenir Membre</a></li>
+									<li><a href="{{route('info-pratique')}}">Réservation</a></li>
+									<li><a href="{{route('info-pratique')}}">Tarifs</a></li>
 								</ul>
 							</li>
 							<li class="has-dropdown">
 								<a id="li_menu4" href="{{route('enseignement')}}">L'enseignement</a>
 								<ul class="dropdown">
-									<li><a href="#l-equipe-pedagogique">Equipe pédagogique</a></li>
-									<li><a href="#l-ecole-de-tennis">Ecole de tennis</a></li>
-									<li><a href="#cours-colectifs">Cours collectifs</a></li>
-									<li><a href="#les-stages">Stages</a></li>
+									<li><a href="{{route('enseignement')}}">Equipe pédagogique</a></li>
+									<li><a href="{{route('enseignement')}}">Ecole de tennis</a></li>
+									<li><a href="{{route('enseignement')}}">Cours collectifs</a></li>
+									<li><a href="{{route('enseignement')}}">Stages</a></li>
 								</ul>
 							</li>
                                                         <li ><a id="li_menu5" href="#">Galerie</a></li>
 							<li><a id="li_menu6" href="{{route('accueil')}}">Liens utiles</a></li>
 							<li class="has-dropdown">
-								<a id="li_menu7" href="{{route('enseignement')}}">Contact</a>
+								<a id="li_menu7" href="{{route('contact')}}">Contact</a>
 								<ul class="dropdown">
-									<li><a  href="#coordonnees">Coordonnées</a></li>
-                                                                        <li><a  href="#contacter">Nous contacter</a></li>
-                                                                        <li><a  href="#plan">Plan d'accès</a></li> 
+									<li><a  href="{{route('contact')}}">Coordonnées</a></li>
+                                                                        <li><a  href="{{route('contact')}}">Nous contacter</a></li>
+                                                                        <li><a  href="{{route('contact')}}">Plan d'accès</a></li> 
 								</ul>
 							</li>
 							
