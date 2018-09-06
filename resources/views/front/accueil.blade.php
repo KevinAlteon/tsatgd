@@ -51,7 +51,7 @@
 <div class="box text-center">
   <div id="gtco-portfolio" class="gtco-section text-center">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box container gtco-container">
+        <div class="col-md-8 col-md-offset-2 text-center gtco-heading container gtco-container">
           <h2 class="text-center newsTitre">Nos derniers articles</h2>
           <div class="news  gtco-container text-center">
           @php($i=0)
