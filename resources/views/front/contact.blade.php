@@ -33,29 +33,31 @@
 
 @section("content")
 
-    <div id="{{ $contenu->sousmenus[0]->slug }}">
-        <div id="gtco-portfolio" class="gtco-section">
+    <div id="{{ $contenu->sousmenus[0]->slug }}" class="gtco-section-first">
+        <div id="gtco-portfolio">
+            <div class="gtco-container">
           <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[0]->titre }}</h2>
                {!! $contenu->sousmenus[0]->contenu !!}
               </div>
           </div>
+            </div>
         </div>
       </div>
-      <div id="{{ $contenu->sousmenus[1]->slug }}">
-        <div id="gtco-counter" class="gtco-section">
+      <div id="{{ $contenu->sousmenus[1]->slug }}" class="gtco-section-first">
+        <div id="gtco-counter" >
           <div class="gtco-container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
-
+               {!! $contenu->sousmenus[1]->contenu !!}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="{{ $contenu->sousmenus[2]->slug }}">
+      <div id="{{ $contenu->sousmenus[2]->slug }}" class="gtco-section-first">
         <div id="gtco-products">
           <div class="gtco-container">
            <div class="row">

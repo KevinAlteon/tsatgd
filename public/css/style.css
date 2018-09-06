@@ -614,12 +614,17 @@ form label {
 
 #gtco-features,
 #gtco-features-2,
-#gtco-products,
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
 .gtco-section {
   padding: 7em 0;
+  clear: both;
+  position: relative;
+}
+#gtco-products,
+.gtco-section-first {
+  padding: 0em 0;
   clear: both;
   position: relative;
 }
@@ -1614,7 +1619,7 @@ form label {
 }
 
 #gtco-portfolio {
-  padding: 7em 0;
+  padding: 0em 0;
   background: #303841;
   min-height: 500px;
 }
