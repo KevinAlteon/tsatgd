@@ -87,6 +87,22 @@ padding-top: 0px;
     padding-bottom: 10px;
 }
 
+/* DEBUT CSS POUR CAROUSEL DE PARTENAIRES */
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel .item{
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
+/* FIN CSS POUR CAROUSEL DE PARTENAIRES */
+
 @media screen and (max-width: 1050px){
 
 .menu-hidden{

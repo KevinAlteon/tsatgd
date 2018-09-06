@@ -176,10 +176,11 @@ URL: http://gettemplates.co
 						<div class="display-t">
 							<div class="display-tc">
 								<div id="gtco-features" class="gtco-features-3">
+									@yield("carousel")
 									<div id="menu">
 										<div class="gtco-container ">
 											<div class="row">
-											</div>
+											</div> 
 											@yield("sous_menu")
 										</div>
 									</div>
@@ -472,6 +473,7 @@ $(document).ready(function() {
 @endif
 <script>
 $(document).ready(function(){
+
 
 	if ($("#checkModal").val()==1){
 		$("#modalLogin").modal();

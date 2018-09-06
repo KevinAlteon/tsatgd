@@ -1,4 +1,44 @@
 @extends("template")
+@section("carousel")
+<!-- Début du carousel de partenaires -->
+<div class="col-md-4 col-md-offset-8">
+  <div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Carousel indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>   
+      <!-- Wrapper for carousel items -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="../public/images/partenaire/download.jpg" alt="First Slide">
+        </div>
+        <div class="item">
+          <img src="../public/images/partenaire/download.png" alt="Second Slide">
+        </div>
+        <div class="item">
+          <img src="../public/images/partenaire/download2.png" alt="Third Slide">
+        </div>
+        <div class="item">
+          <img src="../public/images/partenaire/download3.png" alt="Third Slide">
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="ti-angle-left"></span>
+      </a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="ti-angle-right"></span>
+      </a>
+    </div>
+  </div>
+</div>
+  <!-- Fin du carousel de partenaires -->
+  <br />
+@stop
 @section ('content')
 <div class="box text-center">
   <div id="gtco-portfolio" class="gtco-section text-center">
@@ -14,27 +54,25 @@
               @else
                 @php($esp = "")
               @endif
-              <a id="{{ $laNews->id }}" class="color-1"  data-toggle="modal" data-target="#modalNews{{$laNews->id}}">
-                <div class="text-center mybox col-md-3 {{$esp}} animate-box">
-                  <h2 style="font-size: 17px;">{{ $laNews->titre }}</h2> <br />
-                  <span>{!! str_limit($laNews->contenu , 25 , '... Voir plus.') !!}</span> <br /><br />
-                  @if($laNews->url != "")
-                    <img src="{{$laNews->url}}" height="150" width="125"> 
-                  @else
-                    <br />
-                  @endif
+              <div class="text-center mybox col-md-3 {{$esp}} animate-box" id="{{ $laNews->id }}" data-toggle="modal" data-target="#modalNews{{$laNews->id}}">
+                <h2 style="font-size: 17px;">{{ $laNews->titre }}</h2> <br />
+                <span>{!! str_limit($laNews->contenu , 25 , '... Voir plus.') !!}</span> <br /><br />
+                @if($laNews->url != "")
+                  <img src="{{$laNews->url}}" height="150" width="125"> 
+                @else
                   <br />
-                  @if(auth::check())
-                      @if($laNews->commentaires->count()==0)
-                        <span>0 <b class="ti-comment"></b></span>
-                      @elseif ($laNews->commentaires->count()==1)
-                        <span>1 <b class="ti-comment"></b></span>
-                      @else
-                        <span>{!! $laNews->commentaires->count() !!} <b class="ti-comments"></b></span>
-                      @endif
-                  @endif
-                </div>
-              </a>
+                @endif
+                <br />
+                @if(auth::check())
+                    @if($laNews->commentaires->count()==0)
+                      <span>0 <b class="ti-comment"></b></span>
+                    @elseif ($laNews->commentaires->count()==1)
+                      <span>1 <b class="ti-comment"></b></span>
+                    @else
+                      <span>{!! $laNews->commentaires->count() !!} <b class="ti-comments"></b></span>
+                    @endif
+                @endif
+              </div>
             @endif
           @php($i++)
           @endforeach 

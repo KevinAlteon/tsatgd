@@ -20,7 +20,7 @@ use Mapper;
 class PagesController extends Controller {
 
     public function accueil() {
-      $tab_news = News::all()->sortByDesc("created_at");
+      $tab_news = News::all()->sortByDesc("created_at")->take(3);
 
       return view('front.accueil')
                       ->with("tab_news", $tab_news);
