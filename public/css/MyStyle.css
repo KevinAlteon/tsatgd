@@ -92,9 +92,15 @@ padding-top: 0px;
     color: #8da9b7;
 }
 
+.titrePartenaire {
+    color: white;
+    font-size: 30px;
+    margin-left: 15% !important;
+}
+
 /* DEBUT CSS POUR CAROUSEL DE PARTENAIRES */
 .carousel{
-    background: #2f4357;
+    /*background: #2f4357; */
     margin-top: 20px;
 }
 .carousel .item{
@@ -112,6 +118,10 @@ padding-top: 0px;
 
 .menu-hidden{
 display: none;
+}
+
+.titrePartenaire {
+    display: none !important;
 }
 
 }

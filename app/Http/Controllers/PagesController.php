@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\Partenaire;
 use App\Models\Photo;
 use App\Models\Album;
 use App\Models\SousMenu;
@@ -21,9 +22,10 @@ class PagesController extends Controller {
 
     public function accueil() {
       $tab_news = News::all()->sortByDesc("created_at")->take(3);
+      $tab_partenaires = Partenaire::all();
 
       return view('front.accueil')
-                      ->with("tab_news", $tab_news);
+                      ->with("tab_news", $tab_news)->with("tab_partenaires",$tab_partenaires);
     }
     public function club() {
 

@@ -446,7 +446,7 @@ URL: http://gettemplates.co
 <script src="{{ asset('js/isotope.pkgd.min.js')}}"></script>          <!-- https://isotope.metafizzy.co/ -->
 <script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     <!-- https://imagesloaded.desandro.com/ -->
 <script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
-<script src="{{ asset('js/parallax.min.js')}}"></script>
+<!-- <script src="{{ asset('js/parallax.min.js')}}"></script> -->
 
 
 <script src="{{ asset('js/main.js')}}"></script>
@@ -473,8 +473,7 @@ $(document).ready(function() {
 @endif
 <script>
 $(document).ready(function(){
-
-
+	
 	if ($("#checkModal").val()==1){
 		$("#modalLogin").modal();
 	}
