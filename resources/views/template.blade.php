@@ -148,7 +148,7 @@ URL: http://gettemplates.co
 									<li><a href="{{route('enseignement')}}">Stages</a></li>
 								</ul>
 							</li>
-                                                        <li ><a id="li_menu5" href="#">Galerie</a></li>
+                                                        <li ><a id="li_menu5" href="{{route('galerie')}}">Galerie</a></li>
 							<li><a id="li_menu6" href="{{route('accueil')}}">Liens utiles</a></li>
 							<li class="has-dropdown">
 								<a id="li_menu7" href="{{route('contact')}}">Contact</a>
