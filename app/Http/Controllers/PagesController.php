@@ -28,9 +28,10 @@ class PagesController extends Controller {
                       ->with("tab_news", $tab_news)->with("tab_partenaires",$tab_partenaires);
     }
     public function club() {
+        $tab_partenaires = Partenaire::all();
 
         $contenu=Menu::where("slug","club")->first();
-        return view('front.club')->with("contenu",$contenu);
+        return view('front.club')->with("contenu",$contenu)->with("tab_partenaires",$tab_partenaires);
     }
     public function competition() {
 

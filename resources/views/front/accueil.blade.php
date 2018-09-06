@@ -1,46 +1,50 @@
 @extends("template")
 @section("carousel")
 <!-- Début du carousel de partenaires -->
-<div class="col-md-4 col-md-offset-8">
-<h2 class="titrePartenaire">Ils nous font confiance</h2>
-  <div class="bs-example">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Carousel indicators -->
-      <ol class="carousel-indicators">
-      @php($x = 0)
-      @foreach($tab_partenaires as $lePartenaire)
-        @if($x == 0)
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        @else
-          <li data-target="#myCarousel" data-slide-to="{{$x}}"></li>
-        @endif
-        @php($x++)
-      @endforeach
-      </ol>   
-      <!-- Wrapper for carousel items -->
-      <div class="carousel-inner">
-      @php($j = 0)
+<div>
+  <div class="col-md-3 col-md-offset-5 titrePartenaire">
+    <h2>Nos partenaires</h2>
+  </div>
+  <div class="col-md-4">
+    <div class="bs-example">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+        @php($x = 0)
         @foreach($tab_partenaires as $lePartenaire)
-          @if($j == 0)
-            <div class="item active">
-              <img src="{{$lePartenaire->logo}}">
-            </div>
+          @if($x == 0)
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           @else
-            <div class="item">
-              <img src="{{$lePartenaire->logo}}">
-            </div>
+            <li data-target="#myCarousel" data-slide-to="{{$x}}"></li>
           @endif
-        @php($j++)
+          @php($x++)
         @endforeach
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+        @php($j = 0)
+          @foreach($tab_partenaires as $lePartenaire)
+            @if($j == 0)
+              <div class="item active">
+                <img src="{{$lePartenaire->logo}}">
+              </div>
+            @else
+              <div class="item">
+                <img src="{{$lePartenaire->logo}}">
+              </div>
+            @endif
+          @php($j++)
+          @endforeach
+        </div>
+        <!-- Carousel controls 
+        <a class="" href="#myCarousel" data-slide="prev">
+          <span class="ti-angle-left"></span>
+        </a>
+        <a class="" href="#myCarousel" data-slide="next">
+          <span class="ti-angle-right"></span>
+        </a>
+        -->
       </div>
-      <!-- Carousel controls 
-      <a class="" href="#myCarousel" data-slide="prev">
-        <span class="ti-angle-left"></span>
-      </a>
-      <a class="" href="#myCarousel" data-slide="next">
-        <span class="ti-angle-right"></span>
-      </a>
-      -->
     </div>
   </div>
 </div>

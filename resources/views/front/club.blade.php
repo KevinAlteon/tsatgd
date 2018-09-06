@@ -81,12 +81,105 @@
               <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[3]->titre }}</h2>
-               {!! $contenu->sousmenus[3]->contenu !!}
+                <!-- Début du carousel de partenaires -->
+                <div>
+                  <div class="col-md-4 col-md-offset-4">
+                    <div class="bs-example">
+                      <div id="myCarousel" class="carousel slide pointer" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                        @php($x = 0)
+                        @foreach($tab_partenaires as $lePartenaire)
+                          @if($x == 0)
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          @else
+                            <li data-target="#myCarousel" data-slide-to="{{$x}}"></li>
+                          @endif
+                          @php($x++)
+                        @endforeach
+                        </ol>   
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                        @php($j = 0)
+                          @foreach($tab_partenaires as $lePartenaire)
+                            @if($j == 0)
+                              <div class="item active">
+                                <img id="{{$lePartenaire->id}}" src="{{$lePartenaire->logo}}" data-toggle="modal" data-target="#modalPartenaire{{$lePartenaire->id}}">
+                              </div>
+                            @else
+                              <div class="item">
+                                <img id="{{$lePartenaire->id}}" src="{{$lePartenaire->logo}}" data-toggle="modal" data-target="#modalPartenaire{{$lePartenaire->id}}">
+                              </div>
+                            @endif
+                          @php($j++)
+                          @endforeach
+                        </div>
+                        <!-- Carousel controls 
+                        <a class="" href="#myCarousel" data-slide="prev">
+                          <span class="ti-angle-left"></span>
+                        </a>
+                        <a class="" href="#myCarousel" data-slide="next">
+                          <span class="ti-angle-right"></span>
+                        </a>
+                        -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- Fin du carousel de partenaires -->
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- DEBUT MODAL PARTENAIRE -->
+      @php($j=0)
+      @foreach($tab_partenaires as $lePartenaire)
+        <div id="modalPartenaire{{$lePartenaire->id}}" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header containColor">
+                <div class="col-md-4">
+                    &nbsp;
+                </div>
+                <div class="col-md-4">
+                  <img src="{{$lePartenaire->logo}}" style="max-width: 180px; max-height: 120px;">
+                </div>
+                <div class="col-md-4">
+                    &nbsp;
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <b>{{$lePartenaire->nom}}</b>
+                  </div>
+                  <div class="col-md-12">
+                    Adresse : {{$lePartenaire->adresse}} {{$lePartenaire->cp}} {{$lePartenaire->ville}}
+                  </div>
+                  <div class="col-md-6">
+                    Mail : {{$lePartenaire->mail}}
+                  </div>
+                  <div class="col-md-6">
+                    Téléphone : {{$lePartenaire->tel}}
+                  </div>
+                  <div class="col-md-12">
+                    Site web : {{$lePartenaire->site}}
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer containColor">
+                <button type="button" class="btn btn-secondary hoverButton" data-dismiss="modal">Fermer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      @php($j++)
+      @endforeach
+      <!-- FIN MODAL PARTENAIRE -->
 
 
       {{--
