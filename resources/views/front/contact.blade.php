@@ -51,7 +51,31 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
-               {!! $contenu->sousmenus[1]->contenu !!}
+                <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+             
+                  {!! Form::open(['route' => 'message.send']) !!}
+                    <div class="form-group">
+                      <label for="nom">Auteur :</label>
+                  {!! Form::text('auteur', null, ['class' => 'form-control', 'required']) !!}
+                    </div>
+                    <div class="form-group">
+                      <label for="telephone">Téléphone :</label>
+                  {!! Form::text('telephone', null, ['class' => 'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                      <label for="mail">Adresse e-mail :</label>
+                  {!! Form::email('mail', null, ['class' => 'form-control', 'required']) !!}
+                    </div>
+
+                   <div class="form-group">
+                     <label for="contenu">Message</label>
+                  {{ Form::textarea('contenu', null, ['class' => 'form-control', 'rows' => "3"]) }}
+                   </div>
+                  {{ Form::submit('Envoyer le message', ['class' => 'btn btn-block btn-default btn-lg']) }}
+                  {!! Form::close() !!}
+              </div>
+            </div>
               </div>
             </div>
           </div>

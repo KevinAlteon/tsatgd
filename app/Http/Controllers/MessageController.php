@@ -37,9 +37,32 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $message = new Message();
 
+        $message->auteur = $request->get('auteur');
+        $message->contenu = $request->get('contenu');
+        $message->mail = $request->get('mail');
+        $message->telephone = $request->get('telephone');
+
+
+        $message->save();
+        $request->session()->flash('success', 'L\'message à été Ajouté !');
+        return redirect()->route("contact");
+    }
+    public function send(Request $request)
+    {
+        $message = new Message();
+
+        $message->auteur = $request->get('auteur');
+        $message->contenu = $request->get('contenu');
+        $message->mail = $request->get('mail');
+        $message->telephone = $request->get('telephone');
+
+
+        $message->save();
+        $request->session()->flash('success', 'L\'message à été Ajouté !');
+        return redirect()->route("contact");
+    }
     /**
      * Display the specified resource.
      *
@@ -76,9 +99,9 @@ class MessageController extends Controller
         
         $data = array( 'email' => $message->email, 'sujet' => $message->titre);
         
-        Mail::send('admin.message.mail', ['titre'=>$request->get('titre'),'contenu'=>$request->get('contenu'),'auteur'=>$request->get('nom') . " " . $request->get('prenom')], function ($mail) use($data){
-            $mail->from('ppetennis@gmail.com','Tennis Club Tavaux');
-            $mail->to($data['email']);
+        Mail::send('admin.message.mail', ['titre'=>'Réponse à votre demande','contenu'=>$request->get('contenu'),'auteur'=>$request->get('nom') . " " . $request->get('prenom')], function ($mail) use($data){
+            $mail->from('tsatgd@gmail.com','Tennis Club Tavaux');
+            $mail->to("spernelle@gmail.com");
             $mail->subject($data['sujet']);
         });
 

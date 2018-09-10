@@ -43,7 +43,7 @@
                             @foreach ($lesComites as $unComite)
                             <tr>
                                 <td class="col-md-1">
-                                    {{ $unComite["id"] }}
+                                    {{ $unComite["id"] }}df
                                 </td>
                                 <td class="col-md-4">
                                     {{ $unComite["statut"] }}
@@ -60,7 +60,9 @@
                                             <button type="submit" id="{{ $unComite->id }}" class="btn btn-danger btn-circle jsDeleteButton"><i class="fa fa-times"></i></button>
                                             {!! Form::close() !!}
                                         </div>
-
+                                       <div class="col-md-6">
+                                            <a class="btn btn-primary btn-circle" href="{{ route("comite.add_user", $unComite->id) }}">Ajouter user</a>
+                                        </div>         
                                     </div>
                                 </td>
                             </tr>

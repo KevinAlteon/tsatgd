@@ -16,6 +16,7 @@ use App\Models\Menu;
 use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactFormRequest;
+use Illuminate\Support\Facades\Storage;
 use Mapper;
 use Illuminate\Support\Facades\Storage;
 
@@ -89,6 +90,11 @@ class PagesController extends Controller {
     }
 
     function galerie() {
+        
+        $directory = url("files/"); //essai pour qu'il liste les images à la racine
+       
+$files = Storage::disk('files')->files();;
+         dd($files);
         $lesAlbums = Album::with('photos')->get();
         $files = Storage::disk('files')->allFiles('album');
         //cherche tous les dossiers donc tous les albums
