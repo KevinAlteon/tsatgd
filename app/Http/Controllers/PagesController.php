@@ -29,9 +29,9 @@ class PagesController extends Controller {
     }
     public function club() {
         $tab_partenaires = Partenaire::all();
-
-        $contenu=Menu::where("slug","club")->first();
-        return view('front.club')->with("contenu",$contenu)->with("tab_partenaires",$tab_partenaires);
+        $tab_comites=Comite::with("users")->get();
+       $contenu=Menu::where("slug","club")->first();
+        return view('front.club')->with("contenu",$contenu)->with("tab_partenaires",$tab_partenaires)->with("tab_comites",$tab_comites);
     }
     public function competition() {
 
@@ -41,6 +41,7 @@ class PagesController extends Controller {
     public function infoPratique() {
 
         $contenu=Menu::where("slug","info-pratique")->first();
+
         return view('front.info_pratique')->with("contenu",$contenu);
     }
     public function enseignement() {
@@ -92,8 +93,7 @@ class PagesController extends Controller {
     function showGalerie($id) {
 
         $lesAlbums = Album::with('photos')->find($id);
-        dd($lesAlbums);
-        return view('site.showGalerie', compact('lesAlbums'));
+       return view('site.showGalerie', compact('lesAlbums'));
     }
 
     function coordonnee() {

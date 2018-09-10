@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Comite;
 Use File;
 use Intervention\Image\ImageManager;
 use Illuminate\Filesystem\Filesystem;
@@ -19,7 +20,6 @@ class UserController extends Controller {
      */
     public function index() {
         $lesUsers = User::all();
-
         return view('admin.user.index')
                         ->with('tab_users', $lesUsers);
     }
@@ -30,7 +30,10 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('admin.user.create');
+        $lesComites = Comite::pluck('statut','id');
+        $lesComites[]=null;
+        return view('admin.user.create')
+                        ->with('lesComites', $lesComites);
     }
 
     /**
@@ -74,6 +77,7 @@ class UserController extends Controller {
             'est_admin' => $est_admin,
             'est_joueur' => $est_joueur,
             'est_arbitre' => $est_arbitre,
+            'comite_id' => $request->get('comite'),
 
 
         ]);

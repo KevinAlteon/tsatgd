@@ -58,11 +58,33 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                <h2 class="text-center">{{ $contenu->sousmenus[1]->titre }}</h2>
-               {!! $contenu->sousmenus[1]->contenu !!}
-              </div>
+               <div id="gtco-team" class="gtco-section">
+                    <div class="gtco-container">
+                    <div class="row">      
+                    @foreach ($tab_comites as $comite)
+
+                           
+                          @foreach ($comite->users as $user)
+                               <div class="col-lg-4 col-md-4 col-sm-6 animate-box" data-animate-effect="fadeIn">
+                                        <div class="gtco-staff">
+                                                <img src="images/person_1.jpg" alt="Free HTML5 Templates by gettemplates.co">
+                                                <h3>{{ $user->nom }} {{ $user->prenom }}</h3>
+                                                <strong class="role">{{  $comite->statut }}</strong>    
+                                        </div>
+                                </div>
+                             
+                          @endforeach
+                        
+                    @endforeach
+                    </div>
+                    </div>
+               </div>
+      
+               
+               </div>
             </div>
-          </div>
         </div>
+      </div>
       </div>
       <div id="{{ $contenu->sousmenus[2]->slug }}" class="gtco-section-first">
         <div id="gtco-products">
