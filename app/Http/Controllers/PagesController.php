@@ -17,6 +17,9 @@ use App\Mail\ContactEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactFormRequest;
 use Mapper;
+use Illuminate\Support\Facades\Storage;
+
+
 
 class PagesController extends Controller {
 
@@ -86,7 +89,17 @@ class PagesController extends Controller {
 
     function galerie() {
         $lesAlbums = Album::with('photos')->get();
-        return view('front.galerie')->with("lesAlbums", $lesAlbums);
+        $files = Storage::disk('files')->allFiles('album');
+        //cherche tous les dossiers donc tous les albums
+        
+        return view('front.galerie')->with("lesAlbums", $lesAlbums)->with('files',$files);
+    }
+
+    function album($album,$titreAlbum) {
+        //$album = slug de l'album sur lequel on a cliqué
+        $images = Storage::disk('files')->allFiles('album/'.$album);
+
+        return view('front.galerie')->with('images',$images)->with('titreAlbum',$titreAlbum);
     }
 
     function showGalerie($id) {

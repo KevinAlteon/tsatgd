@@ -64,7 +64,7 @@ return [
         ],
         'files'=>[
             'driver'=>'local',
-            'root'   => base_path().'/files',
+            'root'   => base_path().'\public\files',
             'visibility' => 'public',
         ]
 

@@ -29,7 +29,7 @@ class PhotoController extends Controller {
 
 
     public function store(Request $request) {
-        $request->session()->flash('success', 'L\'image à été Ajouté !');
+        $request->session()->flash('success', 'L\'image à été Ajoutée !');
 
         $image = new Photo();
 

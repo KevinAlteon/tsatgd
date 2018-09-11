@@ -27,6 +27,8 @@ Route::get('competition','PagesController@competition')->name("competition");
 Route::get('contact','PagesController@contact')->name("contact");
 Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
 
+//Affichage de l'album au clic sur la miniature dans galerie
+Route::get('galerie/{album}/{titreAlbum}','PagesController@album')->name('galerie.album');
 
 Route::get('liens_utiles','FrontController@liens_utiles')->name("liens_utiles");
 Route::get('galerie','PagesController@galerie')->name("galerie");

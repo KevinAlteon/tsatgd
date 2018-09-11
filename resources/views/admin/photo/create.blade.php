@@ -28,7 +28,6 @@
         <iframe class="embed-responsive-item"  src="{!! route('elfinder.index') !!}"></iframe>
 
     </div>
-
 </div>
 <button type="submit" class="btn btn-success">Créer</button>
 <button type="reset" class="btn btn-danger">Effacer le formulaire</button>

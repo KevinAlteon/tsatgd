@@ -63,6 +63,9 @@ class AlbumController extends Controller
 
         $album->save();
         $request->session()->flash('success', 'L\'album à été Ajouté !');
+        //N'oublions pas de créer le dossier de l'album
+        $chemin = public_path().'/files/album/'.$album->slug;
+        File::makeDirectory($chemin, $mode = 0777, true, true);
         return redirect()->route("album.index");
     }
 

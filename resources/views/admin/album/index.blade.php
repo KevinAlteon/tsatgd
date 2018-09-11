@@ -84,12 +84,6 @@
                           <button type="submit" id="{{ $unAlbum->id }}" class="btn btn-danger btn-circle jsDeleteButton"><i class="fa fa-times"></i></button>
                           {!! Form::close() !!}
                         </div>
-                        <br><br>
-                        <div class="col-md-12">
-                          {!! Form::open(['route' => ["photo.create", $unAlbum->id], 'method' => 'get']) !!}
-                          <button type="submit" id="{{ $unAlbum->id }}" class="btn btn-success btn-lg btn-block">Ajouter une image a l'album</button>
-                          {!! Form::close() !!}
-                        </div>
                       </div>
                     </td>
                   </tr>
