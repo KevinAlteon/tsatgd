@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comite;
 use App\Models\User;
-class CoordonneeController extends Controller
+class ComiteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class CoordonneeController extends Controller
      */
     public function index()
     {
-        $leComite = Comite::with('Users')->get();
-        $lesUsers = User::pluck('nom','id');
-        return view('admin.coordonnee.index')->with("leComite", $leComite)->with("lesUsers", $lesUsers);
+        $lesComites = Comite::with('Users')->get();
+       
+        return view('admin.comite.index')->with("lesComites", $lesComites);
     }
 
     /**
@@ -27,7 +27,7 @@ class CoordonneeController extends Controller
     public function create()
     {
         $leComite = Comite::all();
-        return view('admin.coordonnee.create')->with("leComite", $leComite);
+        return view('admin.comite.create')->with("leComite", $leComite);
     }
 
     /**
@@ -41,7 +41,7 @@ class CoordonneeController extends Controller
         $comite = new Comite();
         $comite->fonction = $request->get('statut');
         $comite->save();
-        return redirect()->route("coordonnee.create");
+        return redirect()->route("comite.create");
     }
 
     /**
@@ -90,7 +90,7 @@ class CoordonneeController extends Controller
         $user = User::find($id);
         $user->comite_id = NULL;
         $user->save();
-        return redirect()->route("coordonnee.index");
+        return redirect()->route("comite.index");
     }
 
     /**
@@ -105,7 +105,7 @@ class CoordonneeController extends Controller
         $user = User::find($request->get("user".$id));
         $user->comite_id = $id;
         $user->save();
-        return redirect()->route("coordonnee.index");
+        return redirect()->route("comite.index");
     }
 
     public function deleteStatut($id,Request $request)
@@ -115,6 +115,6 @@ class CoordonneeController extends Controller
         User::where('comite_id',$id)->update(['comite_id'=>NULL]);
         $statut->delete();
 
-        return redirect()->route("coordonnee.create");
+        return redirect()->route("comite.create");
     }
 }

@@ -104,9 +104,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
 
     // Coordonnees
     //
-    Route::resource('coordonnee', 'CoordonneeController');
-    Route::post('coordonnee/addUserStatut/{id}', 'CoordonneeController@addUserStatut')->name('add_user_statut');
-    Route::delete('coordonnee/deleteStatut/{id}', 'CoordonneeController@deleteStatut')->name('deleteStatut');
+    Route::resource('comite', 'ComiteController');
+    Route::post('comite/addUserStatut/{id}', 'ComiteController@addUserStatut')->name('add_user_statut');
+    Route::delete('comite/deleteStatut/{id}', 'Comite@deleteStatut')->name('deleteStatut');
 
     // Menu
     //

@@ -262,7 +262,7 @@ end task item
 
 
       <li class="treeview">
-        <a href="{{ route("coordonnee.index") }}"><i class="fa fa-globe"></i> <span>Le comité</span>  </a>
+        <a href="{{ route("comite.index") }}"><i class="fa fa-globe"></i> <span>Le comité</span>  </a>
       </li>
       <li class="header">Modification du site</li>
 

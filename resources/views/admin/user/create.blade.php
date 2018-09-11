@@ -143,8 +143,20 @@
                                  @endif
                              </div>
                          </div>
+                        <div class="form-group{{ $errors->has('comite') ? ' has-error' : '' }}">
+                             <label for="arbitre" class="col-md-4 control-label">Comite</label>
 
+                             <div class="checkbox">
+                                {!! Form::select('comite',$lesComites, ["class"=>"btn btn-primary dropdown-toggle"])!!}
 
+                                 @if ($errors->has('est_arbitre'))
+                                 <span class="help-block">
+                                     <strong>{{ $errors->first('est_arbitre') }}</strong>
+                                 </span>
+                                 @endif
+                             </div>
+                         </div>
+  
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
