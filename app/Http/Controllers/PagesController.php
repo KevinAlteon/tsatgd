@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactFormRequest;
 use Illuminate\Support\Facades\Storage;
 use Mapper;
-use Illuminate\Support\Facades\Storage;
 
 
 
