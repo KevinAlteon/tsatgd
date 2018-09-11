@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row">
       <div class="text-center col-md-12">
-        <h2>{{$titreAlbum}}</h2><br />
+        <h2>Album : {{$titreAlbum}}</h2><br />
       </div>
       @foreach($images as $uneImage)
       <div class="gallery_product col-md-6">
