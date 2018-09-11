@@ -26,7 +26,7 @@ class ComiteController extends Controller
      */
     public function create()
     {
-        $leComite = Comite::all();
+        
         return view('admin.comite.create')->with("leComite", $leComite);
     }
 
@@ -41,7 +41,7 @@ class ComiteController extends Controller
         $comite = new Comite();
         $comite->fonction = $request->get('statut');
         $comite->save();
-        return redirect()->route("comite.create");
+        return redirect()->route("comite.index");
     }
 
     /**
@@ -86,13 +86,16 @@ class ComiteController extends Controller
      */
     public function destroy($id)
     {
-        //dd($id);
-        $user = User::find($id);
-        $user->comite_id = NULL;
-        $user->save();
-        return redirect()->route("comite.index");
-    }
 
+    }
+    public function addUser($id,Request $request)
+    {
+        //
+        $users = User::selectRaw('id, CONCAT(prenom," ",nom) as full_name')->pluck('full_name', 'id');
+        $comite = Comite::find($id);
+         return view('admin.comite.user')->with("users", $users)->with("comite", $comite);;
+   
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -102,7 +105,7 @@ class ComiteController extends Controller
     public function addUserStatut($id,Request $request)
     {
         //
-        $user = User::find($request->get("user".$id));
+        $user = User::find($request->get("user"));
         $user->comite_id = $id;
         $user->save();
         return redirect()->route("comite.index");

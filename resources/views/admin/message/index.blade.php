@@ -11,8 +11,9 @@
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Auteur</th>
-                                <th>Intitulé</th>
+                                <th>Cordonnées</th>
                                 <th>Date</th>
+                                <th>Contenu</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -20,8 +21,9 @@
                             @foreach($lesMessages as $unMessage)
                             <tr>
                                 <td>{{$unMessage->auteur}}</td>
-                                <td>{{$unMessage->titre}}</td>
+                                <td>{{$unMessage->mail}} {{$unMessage->telephone}}</td>
                                 <td>{{$unMessage->created_at->format('d/m/Y')}}</td>
+                                <th>{{$unMessage->contenu}} </th>
                                 @if($unMessage->validation == 1)
                                 <td>
                                     {!! Form::open(['route' => ["message.show", $unMessage->id], 'method' => 'get']) !!}

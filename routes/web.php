@@ -26,6 +26,7 @@ Route::get('enseignement','PagesController@enseignement')->name("enseignement");
 Route::get('competition','PagesController@competition')->name("competition");
 Route::get('contact','PagesController@contact')->name("contact");
 Route::post('store-devenir-membre', 'PagesController@storeFront')->name('membre.store');
+Route::post('message-envoyer', 'MessageController@send')->name('message.send');
 
 //Affichage de l'album au clic sur la miniature dans galerie
 Route::get('galerie/{album}/{titreAlbum}','PagesController@album')->name('galerie.album');
@@ -105,7 +106,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function() {
     // Coordonnees
     //
     Route::resource('comite', 'ComiteController');
-    Route::post('comite/addUserStatut/{id}', 'ComiteController@addUserStatut')->name('add_user_statut');
+    
+    Route::get('comite/addUser/{id}', 'ComiteController@addUser')->name('comite.add_user');
+    Route::put('comite/addUserStatut/{id}', 'ComiteController@addUserStatut')->name('comite.add_user_statut');
     Route::delete('comite/deleteStatut/{id}', 'Comite@deleteStatut')->name('deleteStatut');
 
     // Menu
