@@ -94,12 +94,18 @@ padding-top: 0px;
 }
 
 .unlink{
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none !important;
+    color: #fff !important;
 }
 .aUnlink{
     text-decoration: none;
     color: #8da9b7;
+}
+
+.retourAlbum {
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .pointer {

@@ -101,7 +101,7 @@ URL: http://gettemplates.co
 						<ul class="">
 							<li><a id="{{$identifiant}}" href="#">{{$connexionStatut}} <i class="ti-user"></i></a></li>
 							<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
-							<li><a href="#"><i class="icon-mail2"></i></a></li>
+							<li><a href="{{route('contact')}}"><i class="icon-mail2"></i></a></li>
 						</ul>
 					</div>
 				</div>

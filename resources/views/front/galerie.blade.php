@@ -2,6 +2,13 @@
 @section("tittle")
   Galerie d'images
 @stop
+@if (isset($images))
+  @section("sous_menu")
+  <div>
+    <h2 class="unlink retourAlbum"><a href="{{route('galerie')}}" class="unlink"><b class="ti-back-left"></b> Retour vers les albums</a><h2>
+  </div>
+  @stop
+@endif
 @section ('content')
 <!-- QUAND ON A CLIQUE SUR UNE MINIATURE -->
 @if (isset($images))
@@ -17,13 +24,15 @@
         <img src="{{url('files/')."/".$uneImage}}" class="img-responsive" style="height: 265px; width:265px;">
         <div class="hover" id="image{{$x}}" data-toggle="modal" data-target="#imagemodal{{$x}}">
         <div class="text">
-          Agrandir
+          <span class="ti-fullscreen"></span>
         </div>  
       </div>
   </div>
 </div>
 @php($x++)
 @endforeach
+
+
 <!-- FIN ON A CLIQUE SUR UNE MINIATURE -->
 <!-- DEBUT MODALE AGRANDIR IMAGE -->
 @php($x = 0)
@@ -32,7 +41,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-body">
-          <img src="{{url('files/')."/".$uneImage}}" class="img-responsive">
+          <img src="{{url('files/')."/".$uneImage}}" class="img-responsive" style="width: 100%;">
         </div>
       </div>
     </div>
@@ -54,7 +63,7 @@
         <img src="{{url('files/miniature.PNG')}}" class="img-responsive" style="height: 365px; width:365px;">
       <div class="hover">
       <div class="text">
-        <a class="unlink" href="{{ route('galerie.album',['album' => $unAlbum["slug"], 'titreAlbum' => $unAlbum["titre"]]) }}">{{$unAlbum["titre"]}}</a>
+      <a class="unlink" href="{{ route('galerie.album',['album' => $unAlbum["slug"], 'titreAlbum' => $unAlbum["titre"]]) }}">{{$unAlbum["titre"]}}</a>
       </div>  
     </div>
   </div>
