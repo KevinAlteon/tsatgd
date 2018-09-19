@@ -61,6 +61,11 @@
     <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 pointer">
       <div class="overlay-image">
         <img src="{{url('files/miniature.PNG')}}" class="img-responsive" style="height: 365px; width:365px;">
+      <div class="normal">
+        <div class="text">
+          {{$unAlbum["titre"]}}
+        </div>
+      </div>
       <div class="hover">
       <div class="text">
       <a class="unlink" href="{{ route('galerie.album',['album' => $unAlbum["slug"], 'titreAlbum' => $unAlbum["titre"]]) }}">{{$unAlbum["titre"]}}</a>
